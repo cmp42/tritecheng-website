@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Tritech Engineering</title>
+
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    body {
+      background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image for Services page */
+    body.services-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/img_blueprintWhite.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Landing layout (kept simple so it won’t fight your main CSS) */
+    .services-intro {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 980px;
+      margin: 18px auto 0 auto;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 18px 18px 16px 18px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .service-card h2 {
+      margin: 0 0 10px 0;
+    }
+
+    .service-card p {
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+
+    .service-card ul {
+      margin: 0 0 14px 18px;
+      padding: 0;
+    }
+
+    .service-card li {
+      margin: 6px 0;
+    }
+
+    .service-card a.service-link {
+      display: inline-block;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 2px solid #000666;
+      color: #000666;
+      background: transparent;
+    }
+
+    .service-card a.service-link:hover {
+      background: #000666;
+      color: #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="site-header">
+
+    <!-- Logo Bar -->
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="site-nav" aria-label="Main navigation">
+
+        <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="leaders.html">Leadership</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <!-- Updated to NEW pages -->
+            <li><a href="civileng.html">Civil Engineering</a></li>
+            <li><a href="surveying.html">Surveying</a></li>
+            <li><a href="landplan.html">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- LinkedIn Icon -->
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+    </nav>
+
+  </div>
+  <!-- END HEADER -->
+
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <div class="services-intro">
+      <h1>Services</h1>
+      <p>
+        Tritech Engineering Corporation provides a full range of civil engineering, surveying, and land planning services.
+        Our goal is to deliver practical, cost-effective solutions that address both technical requirements and real-world
+        project constraints.
+      </p>
+      <p>
+        Explore our service areas below to learn more about what we offer and how we can support your next project.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <!-- Civil Engineering -->
+      <section class="service-card" aria-label="Civil Engineering">
+        <h2>Civil Engineering</h2>
+        <p>
+          From early feasibility and permitting through final design and construction support, we provide civil engineering
+          services for residential, commercial, and municipal projects.
+        </p>
+        <ul>
+          <li>Site Planning and Design</li>
+          <li>Road and Utility Design</li>
+          <li>Drainage Analysis</li>
+          <li>Septic System Designs</li>
+          <li>Wetlands Mapping and Analysis</li>
+        </ul>
+        <a class="service-link" href="civileng.html">Learn More</a>
+      </section>
+
+      <!-- Surveying -->
+      <section class="service-card" aria-label="Surveying">
+        <h2>Surveying</h2>
+        <p>
+          Accurate field data is the foundation of successful projects. We offer professional surveying services for
+          property owners, developers, engineers, and municipalities.
+        </p>
+        <ul>
+          <li>Boundary Surveys</li>
+          <li>Plot Plans</li>
+          <li>Construction Layout</li>
+          <li>As-Builts</li>
+          <li>GPS / GIS Services</li>
+        </ul>
+        <a class="service-link" href="surveying.html">Learn More</a>
+      </section>
+
+      <!-- Land Planning -->
+      <section class="service-card" aria-label="Land Planning">
+        <h2>Land Planning</h2>
+        <p>
+          We help clients turn concepts into buildable plans by balancing zoning, environmental constraints, and project goals
+          to guide projects from concept through approval.
+        </p>
+        <ul>
+          <li>Development Feasibility Studies</li>
+          <li>Site Evaluations</li>
+          <li>Conceptual Design</li>
+          <li>Highest and Best Use</li>
+          <li>Regulatory Permitting</li>
+        </ul>
+        <a class="service-link" href="landplan.html">Learn More</a>
+      </section>
+
+    </div>
+  </div>
+  <!-- END content -->
+
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div>
+<!-- END wrapper -->
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

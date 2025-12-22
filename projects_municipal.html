@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tritech Engineering</title>
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+body { 
+  background-color: #000666;
+}
+
+/* Faded blueprint background for MUNICIPAL PROJECTS page */
+body.projects-municipal-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/GerrishCommonPlan.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.30;   /* 70% faded */
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure wrapper stays above the faded background */
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  flex: 1 1 320px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+.project-card img { 
+  border-radius: 4px; 
+  margin-bottom: 10px; 
+}
+
+.project-meta { 
+  font-size: 0.9em; 
+  color: #555; 
+}
+</style>
+</head>
+
+<body class="projects-municipal-page">
+<div class="wrapper">
+
+
+  <!-- HEADER -->
+  <div class="site-header">
+    <div class="logo-bar">
+      <a href="index.html"><img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" /></a>
+    </div>
+    
+     <nav class="site-nav" aria-label="Main navigation">
+
+        <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+        <li><a href="leaders.html">Leadership</a></li>
+      </ul>
+    </li>
+
+        <li class="dropdown">
+  		<a href="services.html">Services</a>
+  		<ul class="dropdown-menu">
+    		<li><a href="services.html#civil">Civil Engineering</a></li>
+    		<li><a href="services.html#surveying">Surveying</a></li>
+    		<li><a href="services.html#landplanning">Land Planning</a></li>
+ 		 </ul>
+		</li>
+  		<li class="dropdown">
+    		<a href="projects.html">Projects</a>
+    		<ul class="dropdown-menu">
+      		<li><a href="projects_commercial.html">Commercial</a></li>
+      		<li><a href="projects_municipal.html">Municipal</a></li>
+          <li><a href="projects_residential.html">Residential</a></li>
+    		</ul>
+  		</li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <h1>Municipal Projects</h1>
+
+    <div class="project-grid">
+
+      <!-- Gerrish Commons -->
+      <div class="project-card">
+        <img src="images/GerrishCommonPlan.jpg" alt="Gerrish Commons" />
+        <h3>Gerrish Commons</h3>
+        <p class="project-meta">
+          Somersworth, New Hampshire &bull; 29-Lot Municipal Open Space Subdivision
+        </p>
+        <p>
+          Gerrish Commons is a 29-lot open space subdivision coordinated closely with municipal
+          review authorities. Designed to preserve natural land while providing efficient municipal
+          infrastructure, the project represents a strong collaboration with the City of Somersworth.
+        </p>
+
+        <p><strong>Key Design Elements:</strong></p>
+        <ul>
+          <li>Cluster-lot open space subdivision</li>
+          <li>Municipal coordination throughout design</li>
+          <li>21.8 acres of 32.3 acres placed in conservation</li>
+          <li>165 GPM municipal dry-well pump station</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div>
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="google-site-verification" content="2doyvSAXeT0kv-xTVJYyiRn0mM4bhK5tfq9LIk7Hbl4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tritech Engineering</title>
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    body {
+      background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image for HOME page (70% transparent = 30% opacity) */
+    body.index-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/TECplan1Willand.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Ensure content sits above background overlay */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+<div class="wrapper"> <!-- OUTER WHITE BOX STARTS HERE -->
+
+  <div class="site-header">
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+        <li><a href="leaders.html">Leadership</a></li>
+      </ul>
+    </li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_residential.html">Residential</a></li>
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- ⭐ LinkedIn icon link -->
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+    </nav> <!-- END site-nav -->
+  </div> <!-- END site-header -->
+
+
+  <!-- ====================================================== -->
+  <!--  LARGE HERO SLIDER (BIG IMAGES SWAPPING EVERY 7s)      -->
+  <!-- ====================================================== -->
+  <div class="hero">
+    <div class="slider">
+      <div class="slider-track">
+        <img src="images/img_bldg.jpg" alt="Tritech Engineering Building" />
+        <img src="images/img_sign.jpg" alt="Tritech Engineering Sign" />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!--  MAIN CONTENT                                          -->
+  <!-- ====================================================== -->
+  <div class="content">
+    <div class="about-section">
+
+      <h2>About Tritech</h2>
+      <p>
+        Tritech Engineering Corporation was founded in 1992 by Robert J. Stowell. At Tritech,
+        our emphasis is on client service and satisfaction. Clients can expect our project managers
+        to use the seasoned judgment necessary to make swift and necessary decisions. This effective
+        practice ensures direct lines of communication, management accountability, and that client
+        service is our ultimate priority.
+      </p>
+
+      <h2>The Philosophy</h2>
+      <p>
+        Tritech Engineering Corporation is a personal service firm that provides objective
+        and professional engineering, surveying, and land planning. The foundation of our work is the
+        understanding of, and the commitment to, the balance of management and technical expertise.
+        Our knowledge and respect of real property development is essential to the problem solving
+        that provides not only a technically correct design, but one that provides a cost effective
+        solution and meets your needs.
+      </p>
+
+      <h2>The Technology</h2>
+      <p>
+        At Tritech our engineers use the latest engineering, drafting, and modeling software
+        to generate the most comprehensive plans available. Tritech plans and reports are clear,
+        concise, and above all, accurate. Tritech Engineering surveyors are armed with the most
+        accurate, reliable and easy to use equipment available. Our surveyors have the training
+        and experience necessary to use this equipment to its fullest and generate the best product
+        possible for our clients. Ultimately, this technology allows Tritech to provide a more
+        accurate and more cost effective product for the client.
+      </p>
+
+      <h2>The Experience</h2>
+      <p>
+        Company ideals and technology are only a part of the picture. Each of the Tritech
+        Engineering staff members has several years of experience in their areas of expertise—
+        a certain asset they bring to the company. Most of all, they each bring commitment and
+        genuine caring for perfecting their craft and client satisfaction.
+      </p>
+
+    </div> <!-- END about-section -->
+  </div> <!-- END content -->
+
+
+  <!-- ====================================================== -->
+  <!--  FOOTER                                                -->
+  <!-- ====================================================== -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div> <!-- END wrapper -->
+
+
+<!-- ====================================================== -->
+<!--  SLIDER SCRIPT (Every 7 seconds)                       -->
+<!-- ====================================================== -->
+<script type="text/javascript">
+(function () {
+  var track = document.getElementsByClassName('slider-track')[0];
+  if (!track) return;
+
+  var currentIndex = 0;
+  var totalSlides = 2;
+
+  function showSlide(index) {
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+  }
+
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }, 7000);
+})();
+</script>
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

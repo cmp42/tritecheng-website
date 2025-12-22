@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tritech Engineering</title>
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+
+
+body {
+  background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image */
+    body.contact-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/img_planwruler.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+}
+
+
+
+/* Layout for contact info + map side by side */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Left column (address/phone/email) */
+.contact-details {
+  flex: 1 1 260px;
+}
+
+/* Right column (map) */
+.contact-map {
+  flex: 1 1 360px;
+}
+
+/* Make iframe map responsive within its column */
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Simple form styling */
+.contact-form {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #003366;
+  background-color: #003366;
+  color: #fffccc;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #039;
+}
+
+/* Stack columns on small screens */
+@media screen and (max-width: 800px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body class="contact-page">
+
+<div class="wrapper">
+
+  <!-- ========================================== -->
+  <!-- HEADER: LOGO + MENU                        -->
+  <!-- ========================================== -->
+  <div class="site-header">
+
+    <!-- Ribbon 1: logo -->
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <!-- Ribbon 2: navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+
+        <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+        <li><a href="leaders.html">Leadership</a></li>
+      </ul>
+    </li>
+    
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+
+    </nav>
+
+  </div> <!-- END site-header -->
+
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTENT                               -->
+  <!-- ========================================== -->
+  <div class="content">
+
+    <h1>Contact Us</h1>
+    <p>
+      Please feel free to contact Tritech Engineering with questions about our services,
+      potential projects, or general inquiries. We look forward to hearing from you.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- LEFT: Address / Phone / Email -->
+      <div class="contact-details">
+        <h2>Office Information</h2>
+        <p><strong>Address:</strong><br />
+          755 Central Avenue<br />
+          Dover, NH 03820
+        </p>
+        <p><strong>Phone:</strong><br />
+          (603) 742-8107
+        </p>
+        <p><strong>Email:</strong><br />
+          <a href="mailto:rjs@tritecheng.com">rjs@tritecheng.com</a>
+        </p>
+      </div>
+
+      <!-- RIGHT: Embedded Map -->
+      <div class="contact-map">
+        <h2>Find Us</h2>
+        <iframe
+          src="https://www.google.com/maps?q=755+Central+Avenue,+Dover,+NH&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map showing Tritech Engineering location">
+        </iframe>
+      </div>
+
+    </div> <!-- END contact-grid -->
+
+
+    <!-- ====================================== -->
+    <!-- CONTACT FORM                           -->
+    <!-- ====================================== -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <!--
+        Note: This form uses mailto:, which opens the visitor's email client
+        to send a message to rjs@tritecheng.com. A server-side script would
+        be needed to send emails directly from the website without the user's email client.
+      -->
+      <form action="mailto:rjs@tritecheng.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required />
+
+        <label for="email">E-mail Address</label>
+        <input type="email" id="email" name="Email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div> <!-- END content -->
+
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                      -->
+  <!-- ========================================== -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div> <!-- END wrapper -->
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | Tritech Engineering</title>
+
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    body {
+      background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image */
+    body.leaders-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/TECplan1Willand.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="leaders-page">
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="site-header">
+
+    <!-- Logo -->
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+
+        <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+        <li><a href="leaders.html">Leadership</a></li>
+      </ul>
+    </li>
+
+
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- ⭐ LinkedIn Icon -->
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+
+    </nav>
+  </div> <!-- END HEADER -->
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <h1>Leadership</h1>
+
+    <!-- Bob -->
+    <h2>
+      Robert J. Stowell, P.E., L.L.S.<br />
+      <span class="detail">Principal-In-Charge</span>
+    </h2>
+
+    <p>
+      As Principal-In-Charge, Robert J. Stowell is actively involved from the outset of every project.
+      During the proposal phase, Bob aligns job requirements with appropriate personnel and project timelines
+      to develop effective and realistic project plans. Working closely with the project managers, he helps establish 
+      project objectives, identify critical paths, and define key ideas before any work is initiated—ensuring a clear 
+      and organized approach from day one.
+    </p>
+
+    <p>
+      Bob earned his degree in Civil Engineering from the University of New Hampshire, and specialized in 
+      structural design, environmental engineering, and wastewater engineering. 
+      With over forty years of experience in the industry, Bob brings a thorough understanding of funding
+      strategies, regulatory requirements, and budget management. He remains deeply involved in maintaining Tritech's
+      high standards, reviewing plans and reports throughout the design process. His hands-on leadership ensures that 
+      each project is supported by the appropriate personel and resources needed to meet milestones efficiently and successfully. 
+    </p>
+
+
+    <!-- Andy -->
+    <h2>
+      Andrew J. Stowell, L.L.S.<br />
+      <span class="detail">Survey Manager / Project Manager</span>
+    </h2>
+
+    <p>
+      Andrew J. Stowell serves as Survey Manager and Project Manager, overseeing projects from inception
+      through completion. His responsibilities include coordinating site data collection, right-of-way determinations, and 
+      construction survey and layout services. Andy plays a critical role in ensuring survey data is accurate, reliable, 
+      and seamlessly integrated into engineering design.
+    </p>
+
+    <p>
+      Andy attended both the University of New Hampshire and Plymouth State College, and brings 
+      forty years of experience. He has been instrumental in modernizing Tritech's surveying 
+      practices, including computerized data collection and standardizing survey procedures to ensure full compatibility 
+      with Computer Aided Design and Drafting. Andy is committed to producing survey and 
+      project plans that are accurate, clear, and concise — consistently exceeding industry standards.
+    </p>
+
+    <br /><br /><br />
+
+  </div> <!-- END content -->
+
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div> <!-- END wrapper -->
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

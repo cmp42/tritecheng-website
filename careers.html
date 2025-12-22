@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tritech Engineering</title>
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+
+
+body {
+  background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image */
+    body.careers-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/img_planwruler.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+}
+
+
+
+.job-list {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.job-list li {
+  margin-bottom: 8px;
+  font-size: 1.05em;
+}
+</style>
+</head>
+
+<body class="careers-page" >
+
+
+<div class="wrapper">
+
+  <!-- ========================================== -->
+  <!-- HEADER: LOGO + MENU                        -->
+  <!-- ========================================== -->
+  <div class="site-header">
+
+    <!-- Ribbon 1: logo -->
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <!-- Ribbon 2: navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+        <li><a href="leaders.html">Leadership</a></li>
+      </ul>
+    </li>
+    
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+
+    </nav>
+
+  </div> <!-- END site-header -->
+
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTENT                               -->
+  <!-- ========================================== -->
+  <div class="content">
+
+    <h1>Working at Tritech Engineering</h1>
+
+    <p>
+      Every day, we strive to deliver high-quality service through clear communication and strong coordination with 
+      our clients, outside contractors, and municipal teams. Our decades of experience allow us to problem solve 
+      effectively and navigate the strict and often complex Town, State, and Federal regulations with confidence. 
+      As a small business, each employee truly becomes part of the family (especially if you love the office dogs as 
+      much as we do!). Our office dogs are part of the culture, and we believe in a relaxed, positive environment 
+      where people feel comfortable, productive, and valued. We pride ourselves on offering a supportive, hands-on 
+      work environment with a healthy work-life balance and meaningful opportunities for growth. 
+    </p>
+
+    <p>
+      Because of our team size, every employee receives individual mentorship and exposure to a wide range of real-world
+      projects - from engineering design and stormwater management to surveying, land planning, and development. Whether
+      you are looking to try on multiple hats or specialize in the areas you enjoy most, Tritech provides the flexibility 
+      and guidance to help you thrive professionally. 
+    </p>
+
+    <p>
+      Tritech is always open to bringing on motivated and hardworking individuals. If you believe you would be a
+      great fit, we encourage you to reach out. We are happy to review resumes and connect confidentially.
+    </p>
+
+    <h2>Current Needs</h2>
+    <ul class="job-list">
+      <li><strong>Engineering Technicians</strong></li>
+      <li><strong>CAD Technicians</strong></li>
+      <li><strong>Administrative Support</strong></li>
+    </ul>
+
+    <h2>How to Apply</h2>
+    <p>
+      If you are interested in joining our team, please send your resume and why you are interested in the job to:
+    </p>
+
+<p>
+  <a href="mailto:rjs@tritecheng.com?subject=Employment%20Inquiry%20-%20Tritech%20Engineering">
+    rjs@tritecheng.com
+  </a>
+</p>
+
+    <p>
+      All inquiries are handled with complete <u>confidentiality</u>.
+    </p>
+
+  </div> <!-- END content -->
+
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                      -->
+  <!-- ========================================== -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div> <!-- END wrapper -->
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

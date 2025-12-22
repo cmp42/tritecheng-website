@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tritech Engineering</title>
+  <link href="tritech.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    body {
+      background-color: #000666;
+      font-family: Arial;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Faded background image */
+    body.projects-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("images/img_planwruler.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<!-- 🔑 THIS IS THE FIX -->
+<body class="projects-page">
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="site-header">
+
+    <div class="logo-bar">
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+      </a>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    ☰
+  </button>
+
+  <!-- Main navigation links -->
+  <ul id="primary-nav" class="nav-links">
+
+
+        <li class="dropdown">
+          <a href="index.html">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="leaders.html">Leadership</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+
+      <a class="linkedin-icon"
+         href="https://www.linkedin.com/company/tritech-engineering-corp"
+         target="_blank"
+         aria-label="Tritech LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+    </nav>
+
+  </div>
+  <!-- END HEADER -->
+
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <h1>Projects</h1>
+    <p>
+      Tritech Engineering has completed a wide range of projects for municipalities,
+      residential clients, and commercial developments. Select a project type below
+      to explore representative work and learn more about our experience in each area.
+    </p>
+
+    <h2>Project Categories</h2>
+
+<div class="project-grid">
+  <a class="project-card" href="projects_commercial.html">
+    <h3>Commercial</h3>
+    <p>Commercial and mixed-use sites including retail, office, and light industrial developments.</p>
+    <span class="project-cta">View Commercial Projects →</span>
+  </a>
+
+  <a class="project-card" href="projects_municipal.html">
+    <h3>Municipal</h3>
+    <p>Infrastructure, roadway, and utility projects for towns, cities, and public agencies.</p>
+    <span class="project-cta">View Municipal Projects →</span>
+  </a>
+
+  <a class="project-card" href="projects_residential.html">
+    <h3>Residential</h3>
+    <p>Single-family homes, subdivisions, and residential site development.</p>
+    <span class="project-cta">View Residential Projects →</span>
+  </a>
+</div>
+  <!-- END CONTENT -->
+
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
+    <p>Engineers — Surveyors — Planners</p>
+  </div>
+
+</div>
+<!-- END WRAPPER -->
+
+<script>
+  // Hamburger toggle
+  const btn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (btn && nav) {
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Mobile dropdown: tap to open/close
+  function isMobileNav() {
+    return window.matchMedia("(max-width: 600px)").matches;
+  }
+
+  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
+    topLink.addEventListener("click", (e) => {
+      if (!isMobileNav()) return;
+
+      const li = topLink.parentElement;
+      const submenu = li.querySelector(".dropdown-menu");
+
+      // If this item has a submenu, toggle it (don’t navigate)
+      if (submenu) {
+        e.preventDefault();
+
+        // Close other dropdowns (optional but cleaner)
+        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
+          if (openLi !== li) openLi.classList.remove("submenu-open");
+        });
+
+        li.classList.toggle("submenu-open");
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
