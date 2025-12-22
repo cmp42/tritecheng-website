@@ -1,6 +1,7 @@
 Tritech Engineering Corporation Website
 
-Overview
+
+
 This repository contains the official website for Tritech Engineering Corporation, a civil engineering and surveying firm based in Dover, New Hampshire.
 The site is a static HTML/CSS website designed to be lightweight, fast, and easy to maintain.
 
