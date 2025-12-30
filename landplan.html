@@ -7,8 +7,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Land Planning | Tritech Engineering</title>
-<link rel="canonical" href="https://tritechengcorp.netlify.app/landplan.html" />
+
+  <!-- SEO: Title + Description -->
+  <title>Site Planning & Land Use Planning in Dover, NH | Tritech Engineering</title>
+  <meta name="description" content="Site planning and land use planning in Dover, NH. Tritech Engineering provides site design, feasibility studies, conceptual planning, and permitting support across Dover and the Seacoast region." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tritechengcorp.netlify.app/landplan.html" />
+
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
@@ -88,6 +94,35 @@
     .breadcrumbs a { color: #000666; font-weight: bold; text-decoration: none; }
     .breadcrumbs a:hover { text-decoration: underline; }
   </style>
+
+  <!-- Structured data (helps Google understand service + location) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Site Planning and Land Use Planning",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Tritech Engineering Corporation",
+      "telephone": "+1-603-742-8107",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "755 Central Avenue",
+        "addressLocality": "Dover",
+        "addressRegion": "NH",
+        "postalCode": "03820",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": [
+      "Dover, NH",
+      "Seacoast New Hampshire",
+      "Portsmouth, NH",
+      "Rochester, NH"
+    ],
+    "url": "https://tritechengcorp.netlify.app/landplan.html"
+  }
+  </script>
 </head>
 
 <body class="service-detail">
@@ -103,16 +138,16 @@
 
     <nav class="site-nav" aria-label="Main navigation">
 
-        <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -146,6 +181,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -161,18 +197,18 @@
         <a href="services.html">Services</a> &nbsp;›&nbsp; Land Planning
       </div>
 
-      <h1>Land Planning</h1>
+      <h1>Site Planning & Land Use Planning in Dover, New Hampshire</h1>
       <p>
-        Tritech Engineering Corporation provides land planning services that balance development goals with
-        environmental constraints, regulatory, and community considerations. We help clients transform raw land into 
-        well-designed, functional sites that meet zoning requirements and long-term project objectives,
-        guiding projects from early concept through municipal review and permitting.
+        Tritech Engineering Corporation provides site planning and land use planning services in Dover, NH. We help clients
+        transform raw land into well-designed, functional sites by balancing development goals with environmental constraints,
+        regulatory requirements, and community considerations—guiding projects from early concept through municipal review
+        and permitting.
       </p>
       <br/>
       <p>
-        Our team works collaboratively with clients, municipalities, and design professionals to guide projects
-        from concept through approval. We focus on practical, buildable solutions that address site constraints
-        as well as your goals. 
+        Our team supports site design and approval strategies across Dover and the Seacoast region, including Portsmouth and
+        Rochester. We work collaboratively with clients, municipalities, and design professionals to deliver practical,
+        buildable solutions aligned with your goals.
       </p>
     </div>
 
@@ -202,6 +238,16 @@
           <p><strong>Considering a Development Project?</strong> Let’s discuss feasibility, timeline, and the approval process.</p>
           <a href="contact.html">Contact Us</a>
         </div>
+      </section>
+
+      <!-- SEO: One FAQ (small, helpful, no layout change) -->
+      <section class="section-card">
+        <h2>Frequently Asked Question</h2>
+        <h3>What is included in site planning for a new development?</h3>
+        <p>
+          Site planning typically includes evaluating constraints, preparing a conceptual site layout, coordinating zoning and
+          land use requirements, and supporting the permitting process so a project can move efficiently from concept to approval.
+        </p>
       </section>
 
     </div>
@@ -254,7 +300,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
