@@ -7,8 +7,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Civil Engineering | Tritech Engineering</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Civil Engineering Firm in Dover, NH | Tritech Engineering</title>
+  <meta name="description" content="Tritech Engineering is a civil engineering firm in Dover, NH providing site design, drainage and stormwater management, septic system design, and permitting support across Dover and the Seacoast region." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://tritechengcorp.netlify.app/civileng.html" />
+
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
@@ -89,6 +95,35 @@
 
     .cta a:hover { background: #000666; color: #ffffff; }
   </style>
+
+  <!-- Structured data (helps Google understand service + location) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Civil Engineering",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Tritech Engineering Corporation",
+      "telephone": "+1-603-742-8107",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "755 Central Avenue",
+        "addressLocality": "Dover",
+        "addressRegion": "NH",
+        "postalCode": "03820",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": [
+      "Dover, NH",
+      "Seacoast New Hampshire",
+      "Portsmouth, NH",
+      "Rochester, NH"
+    ],
+    "url": "https://tritechengcorp.netlify.app/civileng.html"
+  }
+  </script>
 </head>
 
 <body class="service-detail">
@@ -106,17 +141,17 @@
 
     <!-- Navigation Bar -->
     <nav class="site-nav" aria-label="Main navigation">
-      
-  <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
+
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -151,6 +186,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -158,7 +194,6 @@
 
   </div>
   <!-- END HEADER -->
-
 
   <!-- MAIN CONTENT -->
   <div class="content">
@@ -168,18 +203,17 @@
         <a href="services.html">Services</a> &nbsp;›&nbsp; Civil Engineering
       </div>
 
-      <h1>Civil Engineering</h1>
+      <h1>Civil Engineering Services in Dover, New Hampshire</h1>
       <p>
-        Tritech Engineering Corporation provides comprehensive civil engineering services to support residential,
-        commercial, and municipal development projects throughout NH and New England. From early feasibility and 
-        permitting through final design and construction support, our team delivers practical, cost-effective 
-        solutions that meet regulatory requirements and real-world project goals.
+        Tritech Engineering Corporation is a civil engineering firm in Dover, NH supporting residential, commercial,
+        and municipal development. From early feasibility and permitting through final design and construction support,
+        our team delivers practical, cost-effective solutions that meet regulatory requirements and real-world project goals.
       </p>
       <br/>
-        <p>
-            Our engineers work closely with clients, municipalities, and regulatory agencies to streamline 
-            approvals and ensure projects move forward efficiently. 
-        </p>
+      <p>
+        We serve Dover and the Seacoast region, including Portsmouth and Rochester, and coordinate closely with clients,
+        municipalities, and regulatory agencies to streamline approvals and keep projects moving efficiently.
+      </p>
     </div>
 
     <div class="service-sections">
@@ -190,6 +224,7 @@
           <li>Site Planning and Design</li>
           <li>Road and Utility Design</li>
           <li>Drainage Analysis</li>
+          <li>Stormwater Management</li>
           <li>Septic System Designs</li>
           <li>Waterfront Site Assessments</li>
           <li>Traffic Studies</li>
@@ -215,11 +250,20 @@
         </div>
       </section>
 
+      <!-- SEO: One FAQ (small, helpful, no layout change) -->
+      <section class="section-card">
+        <h2>Frequently Asked Question</h2>
+        <h3>What does a civil engineer do for a site development project?</h3>
+        <p>
+          A civil engineer evaluates site constraints, designs grading and drainage, plans utilities and access,
+          supports stormwater management, and prepares permitting documents so a project can move from concept to construction.
+        </p>
+      </section>
+
     </div>
 
   </div>
   <!-- END content -->
-
 
   <!-- FOOTER -->
   <div class="site-footer">
@@ -267,7 +311,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
