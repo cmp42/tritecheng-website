@@ -7,8 +7,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surveying | Tritech Engineering</title>
-<link rel="canonical" href="https://tritechengcorp.netlify.app/surveying.html" />
+
+  <!-- SEO: Title + Description -->
+  <title>Land Surveying in Dover, NH | Land Surveyor Near Me | Tritech Engineering</title>
+  <meta name="description" content="Land surveying in Dover, NH including boundary surveys, property surveys, plot plans, subdivisions, and construction layout. Tritech serves Dover and the Seacoast region." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tritechengcorp.netlify.app/surveying.html" />
+
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
@@ -88,6 +94,36 @@
     .breadcrumbs a { color: #000666; font-weight: bold; text-decoration: none; }
     .breadcrumbs a:hover { text-decoration: underline; }
   </style>
+
+  <!-- Structured data (helps Google understand service + location) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Land Surveying",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Tritech Engineering Corporation",
+      "telephone": "+1-603-742-8107",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "755 Central Avenue",
+        "addressLocality": "Dover",
+        "addressRegion": "NH",
+        "postalCode": "03820",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": [
+      "Dover, NH",
+      "03820",
+      "Seacoast New Hampshire",
+      "Portsmouth, NH",
+      "Rochester, NH"
+    ],
+    "url": "https://tritechengcorp.netlify.app/surveying.html"
+  }
+  </script>
 </head>
 
 <body class="service-detail">
@@ -103,16 +139,16 @@
 
     <nav class="site-nav" aria-label="Main navigation">
 
-        <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -146,6 +182,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -161,15 +198,16 @@
         <a href="services.html">Services</a> &nbsp;›&nbsp; Surveying
       </div>
 
-      <h1>Surveying</h1>
+      <h1>Land Surveying Services in Dover, New Hampshire</h1>
       <p>
-        Tritech Engineering offers professional land surveying services for property owners, developers,
-        engineers, and municipalities. Our surveyors deliver accurate, reliable field data essential for 
-        land development, boundary determination, and construction — helping projects move forward with confidence.
+        Tritech Engineering offers professional land surveying in Dover, NH for property owners, developers,
+        engineers, and municipalities. Our surveyors deliver accurate, reliable field data essential for boundary
+        determination, property surveys, and construction—helping projects move forward with confidence.
       </p>
       <br/>
-      <p> 
-        Using modern surveying equipment and techniques, our team delivers clear, dependable results you can build on. 
+      <p>
+        If you’re searching for a <strong>land surveyor near Dover, New Hampshire</strong>, we provide clear results you can build on.
+        We serve Dover and the Seacoast region, including Portsmouth and Rochester.
       </p>
     </div>
 
@@ -179,7 +217,7 @@
         <h2>Services Include</h2>
         <ul>
           <li>Boundary Surveys</li>
-          <li>Plot Plans</li>
+          <li>Property Surveys and Plot Plans</li>
           <li>Subdivisions</li>
           <li>As-Builts</li>
           <li>Construction Layout</li>
@@ -192,14 +230,24 @@
       <section class="section-card">
         <h2>Why Surveying Matters</h2>
         <p>
-            Accurate surveying is the foundation of every successful project. Proper data helps prevent disputes, delays,
-            and costly construction errors. 
+          Accurate surveying is the foundation of every successful project. Proper data helps prevent disputes, delays,
+          and costly construction errors.
         </p>
 
         <div class="cta">
           <p><strong>Need a survey?</strong> Tell us about your property and timeline—we’ll help you determine what’s needed.</p>
           <a href="contact.html">Contact Us</a>
         </div>
+      </section>
+
+      <!-- SEO: One FAQ (helps rankings; keeps layout consistent) -->
+      <section class="section-card">
+        <h2>Frequently Asked Question</h2>
+        <h3>What is a boundary survey?</h3>
+        <p>
+          A boundary survey identifies the legal property lines of a parcel. It is often needed for property transactions,
+          permits, additions, fencing, or to resolve boundary questions before construction begins.
+        </p>
       </section>
 
     </div>
@@ -252,7 +300,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
