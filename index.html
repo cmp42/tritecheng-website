@@ -5,9 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="google-site-verification" content="2doyvSAXeT0kv-xTVJYyiRn0mM4bhK5tfq9LIk7Hbl4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tritech Engineering</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Civil Engineering & Land Surveying in Dover, NH | Tritech Engineering</title>
+  <meta name="description" content="Tritech Engineering is a civil engineering and land surveying firm in Dover, New Hampshire providing civil engineering, site planning, land use planning, and surveying services across Dover and the Seacoast." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://tritechengcorp.netlify.app/" />
+
+  <!-- Social sharing (optional but helpful) -->
+  <meta property="og:title" content="Civil Engineering & Land Surveying in Dover, NH | Tritech Engineering" />
+  <meta property="og:description" content="Civil engineering, land surveying, and site planning services in Dover, NH and the Seacoast region." />
+  <meta property="og:url" content="https://tritechengcorp.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
   <link href="tritech.css" rel="stylesheet" type="text/css" />
+
   <style type="text/css">
     body {
       background-color: #000666;
@@ -35,7 +49,60 @@
       position: relative;
       z-index: 1;
     }
+
+    /* Tiny, safe utility styles that won’t change your layout much */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .home-intro {
+      margin-top: 10px;
+    }
+
+    .home-services {
+      margin-top: 18px;
+    }
+    .home-services ul {
+      margin: 8px 0 0 18px;
+    }
+    .home-services li {
+      margin: 6px 0;
+    }
   </style>
+
+  <!-- LocalBusiness schema (helps Google understand business + location) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tritech Engineering Corporation",
+    "url": "https://tritechengcorp.netlify.app/",
+    "image": "https://tritechengcorp.netlify.app/images/TECLargeColorLogo.png",
+    "telephone": "+1-603-742-8107",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "755 Central Avenue",
+      "addressLocality": "Dover",
+      "addressRegion": "NH",
+      "postalCode": "03820",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Dover, NH",
+      "Seacoast New Hampshire",
+      "Portsmouth, NH",
+      "Rochester, NH"
+    ]
+  }
+  </script>
 </head>
 
 <body class="index-page">
@@ -45,29 +112,30 @@
   <div class="site-header">
     <div class="logo-bar">
       <a href="index.html">
-        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" />
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering Corporation logo" />
       </a>
     </div>
 
     <nav class="site-nav" aria-label="Main navigation">
 
-  <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
           <ul class="dropdown-menu">
-        <li><a href="leaders.html">Leadership</a></li>
-      </ul>
-    </li>
+            <li><a href="leaders.html">Leadership</a></li>
+          </ul>
+        </li>
+
         <li class="dropdown">
           <a href="services.html">Services</a>
           <ul class="dropdown-menu">
@@ -94,6 +162,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -107,8 +176,8 @@
   <div class="hero">
     <div class="slider">
       <div class="slider-track">
-        <img src="images/img_bldg.jpg" alt="Tritech Engineering Building" />
-        <img src="images/img_sign.jpg" alt="Tritech Engineering Sign" />
+        <img src="images/img_bldg.jpg" alt="Tritech Engineering office in Dover, New Hampshire" />
+        <img src="images/img_sign.jpg" alt="Tritech Engineering sign in Dover, NH" />
       </div>
     </div>
   </div>
@@ -119,6 +188,30 @@
   <!-- ====================================================== -->
   <div class="content">
     <div class="about-section">
+
+      <!-- SEO: Add a real H1 (kept subtle so it won’t change the look) -->
+      <h1 class="sr-only">Civil Engineering and Land Surveying in Dover, NH</h1>
+
+      <!-- SEO: Short intro paragraph with natural keywords (looks normal) -->
+      <p class="home-intro">
+        Tritech Engineering is a civil engineering and land surveying firm in Dover, New Hampshire. We provide
+        civil engineering, land surveying, site planning, and land use planning services for residential,
+        commercial, and municipal projects in Dover and the Seacoast region.
+      </p>
+
+      <!-- SEO + UX: internal links + service phrasing -->
+      <div class="home-services">
+        <h2>Engineering & Surveying Services in Dover, NH</h2>
+        <p>
+          Our team supports clients with site design, stormwater management, and septic system design as part of
+          our development and permitting services.
+        </p>
+        <ul>
+          <li><a href="civileng.html">Civil Engineering</a></li>
+          <li><a href="surveying.html">Land Surveying</a></li>
+          <li><a href="landplan.html">Site Planning & Land Use Planning</a></li>
+        </ul>
+      </div>
 
       <h2>About Tritech</h2>
       <p>
@@ -233,7 +326,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
