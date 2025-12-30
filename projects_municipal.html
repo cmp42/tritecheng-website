@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tritech Engineering</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Municipal Engineering Projects in Dover, NH | Tritech Engineering</title>
+  <meta name="description" content="Municipal engineering projects in Dover, NH and surrounding communities. View Tritech Engineering’s experience with public infrastructure, open space subdivisions, and municipal coordination." />
+
   <link rel="canonical" href="https://tritechengcorp.netlify.app/projects_municipal.html" />
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
@@ -22,7 +26,7 @@ body.projects-municipal-page::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.30;   /* 70% faded */
+  opacity: 0.30;
   pointer-events: none;
   z-index: -1;
 }
@@ -58,54 +62,85 @@ body.projects-municipal-page::before {
   color: #555; 
 }
 </style>
+
+<!-- Structured data for municipal projects -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Municipal Engineering Projects",
+  "url": "https://tritechengcorp.netlify.app/projects_municipal.html",
+  "about": [
+    "Municipal engineering",
+    "Public infrastructure projects",
+    "Open space subdivision design",
+    "Municipal permitting and coordination"
+  ],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Tritech Engineering Corporation",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "755 Central Avenue",
+      "addressLocality": "Dover",
+      "addressRegion": "NH",
+      "postalCode": "03820",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="projects-municipal-page">
 <div class="wrapper">
 
-
   <!-- HEADER -->
   <div class="site-header">
     <div class="logo-bar">
-      <a href="index.html"><img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" /></a>
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering Corporation logo" />
+      </a>
     </div>
     
-     <nav class="site-nav" aria-label="Main navigation">
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
           <ul class="dropdown-menu">
-        <li><a href="leaders.html">Leadership</a></li>
-      </ul>
-    </li>
+            <li><a href="leaders.html">Leadership</a></li>
+          </ul>
+        </li>
 
         <li class="dropdown">
-  		<a href="services.html">Services</a>
-  		<ul class="dropdown-menu">
-    		<li><a href="services.html#civil">Civil Engineering</a></li>
-    		<li><a href="services.html#surveying">Surveying</a></li>
-    		<li><a href="services.html#landplanning">Land Planning</a></li>
- 		 </ul>
-		</li>
-  		<li class="dropdown">
-    		<a href="projects.html">Projects</a>
-    		<ul class="dropdown-menu">
-      		<li><a href="projects_commercial.html">Commercial</a></li>
-      		<li><a href="projects_municipal.html">Municipal</a></li>
-          <li><a href="projects_residential.html">Residential</a></li>
-    		</ul>
-  		</li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -113,6 +148,7 @@ body.projects-municipal-page::before {
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -122,28 +158,36 @@ body.projects-municipal-page::before {
 
   <!-- MAIN CONTENT -->
   <div class="content">
-    <h1>Municipal Projects</h1>
+
+    <h1>Municipal Engineering Projects in Dover, NH</h1>
+    <p>
+      Tritech Engineering has completed municipal engineering projects for towns and cities throughout
+      Dover, NH and surrounding communities. Our work includes public infrastructure, open space
+      subdivisions, and projects requiring close coordination with municipal review boards and agencies.
+    </p>
 
     <div class="project-grid">
 
       <!-- Gerrish Commons -->
       <div class="project-card">
-        <img src="images/GerrishCommonPlan.jpg" alt="Gerrish Commons" />
+        <img src="images/GerrishCommonPlan.jpg"
+             alt="Gerrish Commons municipal open space subdivision project in Somersworth New Hampshire" />
+
         <h3>Gerrish Commons</h3>
         <p class="project-meta">
           Somersworth, New Hampshire &bull; 29-Lot Municipal Open Space Subdivision
         </p>
         <p>
-          Gerrish Commons is a 29-lot open space subdivision coordinated closely with municipal
-          review authorities. Designed to preserve natural land while providing efficient municipal
-          infrastructure, the project represents a strong collaboration with the City of Somersworth.
+          Gerrish Commons is a 29-lot open space subdivision designed in close coordination with municipal
+          review authorities. The project preserves natural land while providing efficient municipal
+          infrastructure and reflects a strong collaboration with the City of Somersworth.
         </p>
 
         <p><strong>Key Design Elements:</strong></p>
         <ul>
-          <li>Cluster-lot open space subdivision</li>
-          <li>Municipal coordination throughout design</li>
-          <li>21.8 acres of 32.3 acres placed in conservation</li>
+          <li>Cluster-lot open space subdivision design</li>
+          <li>Municipal coordination throughout planning and review</li>
+          <li>21.8 acres of 32.3 acres placed in permanent conservation</li>
           <li>165 GPM municipal dry-well pump station</li>
         </ul>
       </div>
@@ -160,7 +204,6 @@ body.projects-municipal-page::before {
 </div>
 
 <script>
-  // Hamburger toggle
   const btn = document.querySelector(".nav-toggle");
   const nav = document.querySelector("#primary-nav");
 
@@ -171,7 +214,6 @@ body.projects-municipal-page::before {
     });
   }
 
-  // Mobile dropdown: tap to open/close
   function isMobileNav() {
     return window.matchMedia("(max-width: 600px)").matches;
   }
@@ -183,21 +225,16 @@ body.projects-municipal-page::before {
       const li = topLink.parentElement;
       const submenu = li.querySelector(".dropdown-menu");
 
-      // If this item has a submenu, toggle it (don’t navigate)
       if (submenu) {
         e.preventDefault();
-
-        // Close other dropdowns (optional but cleaner)
         document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
           if (openLi !== li) openLi.classList.remove("submenu-open");
         });
-
         li.classList.toggle("submenu-open");
       }
     });
   });
 </script>
-
 
 </body>
 </html>
