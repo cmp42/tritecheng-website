@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tritech Engineering</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Engineering Projects in Dover, NH | Commercial, Municipal & Residential | Tritech</title>
+  <meta name="description" content="Explore Tritech Engineering projects in Dover, NH and the Seacoast region. View representative commercial, municipal, and residential work in civil engineering, land surveying, and site planning." />
+
   <link rel="canonical" href="https://tritechengcorp.netlify.app/projects.html" />
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
@@ -30,9 +34,23 @@
       z-index: -1;
     }
   </style>
+
+  <!-- Structured data (optional, helps Google understand this page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects | Tritech Engineering",
+    "url": "https://tritechengcorp.netlify.app/projects.html",
+    "about": [
+      "Civil engineering projects",
+      "Land surveying projects",
+      "Site planning projects"
+    ]
+  }
+  </script>
 </head>
 
-<!-- 🔑 THIS IS THE FIX -->
 <body class="projects-page">
 
 <div class="wrapper">
@@ -47,17 +65,16 @@
     </div>
 
     <nav class="site-nav" aria-label="Main navigation">
-  <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
-
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -92,6 +109,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -104,34 +122,37 @@
   <!-- MAIN CONTENT -->
   <div class="content">
 
-    <h1>Projects</h1>
+    <h1>Civil Engineering Project Examples</h1>
     <p>
       Tritech Engineering has completed a wide range of projects for municipalities,
-      residential clients, and commercial developments. Select a project type below
-      to explore representative work and learn more about our experience in each area.
+      residential clients, and commercial developments. Our work includes civil engineering,
+      land surveying, and site planning throughout Dover, NH and the Seacoast region.
+      Select a project type below to explore representative work and learn more about our experience.
     </p>
 
     <h2>Project Categories</h2>
 
-<div class="project-grid">
-  <a class="project-card" href="projects_commercial.html">
-    <h3>Commercial</h3>
-    <p>Commercial and mixed-use sites including retail, office, and light industrial developments.</p>
-    <span class="project-cta">View Commercial Projects →</span>
-  </a>
+    <div class="project-grid">
+      <a class="project-card" href="projects_commercial.html">
+        <h3>Commercial</h3>
+        <p>Commercial and mixed-use sites including retail, office, and light industrial developments.</p>
+        <span class="project-cta">View Commercial Projects →</span>
+      </a>
 
-  <a class="project-card" href="projects_municipal.html">
-    <h3>Municipal</h3>
-    <p>Infrastructure, roadway, and utility projects for towns, cities, and public agencies.</p>
-    <span class="project-cta">View Municipal Projects →</span>
-  </a>
+      <a class="project-card" href="projects_municipal.html">
+        <h3>Municipal</h3>
+        <p>Infrastructure, roadway, and utility projects for towns, cities, and public agencies.</p>
+        <span class="project-cta">View Municipal Projects →</span>
+      </a>
 
-  <a class="project-card" href="projects_residential.html">
-    <h3>Residential</h3>
-    <p>Single-family homes, subdivisions, and residential site development.</p>
-    <span class="project-cta">View Residential Projects →</span>
-  </a>
-</div>
+      <a class="project-card" href="projects_residential.html">
+        <h3>Residential</h3>
+        <p>Single-family homes, subdivisions, and residential site development.</p>
+        <span class="project-cta">View Residential Projects →</span>
+      </a>
+    </div>
+
+  </div>
   <!-- END CONTENT -->
 
 
@@ -182,7 +203,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
