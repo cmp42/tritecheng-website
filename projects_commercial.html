@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tritech Engineering</title>
+
+  <!-- SEO: Title + Description -->
+  <title>Commercial Engineering Projects | Tritech Engineering</title>
+  <meta name="description" content="View commercial engineering projects in Dover, NH including medical office, retail, and mixed-use developments. Tritech Engineering provides civil engineering, site design, and stormwater management services." />
+
   <link rel="canonical" href="https://tritechengcorp.netlify.app/projects_commercial.html" />
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
@@ -18,11 +22,11 @@ body.projects-commercial-page::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("images/exit9back.jpg"); /* Commercial background */
+  background-image: url("images/exit9back.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.30;     /* 70% faded */
+  opacity: 0.30;
   pointer-events: none;
   z-index: -1;
 }
@@ -77,13 +81,8 @@ body.projects-commercial-page::before {
   font-size: 18px;
 }
 
-.project-slider-btn.prev {
-  left: 10px;
-}
-
-.project-slider-btn.next {
-  right: 10px;
-}
+.project-slider-btn.prev { left: 10px; }
+.project-slider-btn.next { right: 10px; }
 
 .project-slider-btn:hover {
   background: rgba(0, 0, 0, 0.7);
@@ -94,6 +93,34 @@ body.projects-commercial-page::before {
   color: #555555;
 }
 </style>
+
+<!-- Structured data for projects -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Commercial Engineering Projects",
+  "url": "https://tritechengcorp.netlify.app/projects_commercial.html",
+  "about": [
+    "Commercial site development",
+    "Civil engineering projects",
+    "Stormwater management",
+    "Medical office development"
+  ],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Tritech Engineering Corporation",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "755 Central Avenue",
+      "addressLocality": "Dover",
+      "addressRegion": "NH",
+      "postalCode": "03820",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="projects-commercial-page">
@@ -102,21 +129,23 @@ body.projects-commercial-page::before {
   <!-- HEADER -->
   <div class="site-header">
     <div class="logo-bar">
-      <a href="index.html"><img src="images/TECLargeColorLogo.png" alt="Tritech Engineering" /></a>
+      <a href="index.html">
+        <img src="images/TECLargeColorLogo.png" alt="Tritech Engineering Corporation logo" />
+      </a>
     </div>
 
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Main navigation">
 
-        <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -126,21 +155,23 @@ body.projects-commercial-page::before {
         </li>
         
         <li class="dropdown">
-  		<a href="services.html">Services</a>
-  		<ul class="dropdown-menu">
-    		<li><a href="services.html#civil">Civil Engineering</a></li>
-    		<li><a href="services.html#surveying">Surveying</a></li>
-    		<li><a href="services.html#landplanning">Land Planning</a></li>
- 		 </ul>
-		</li>
-  		<li class="dropdown">
-    		<a href="projects.html">Projects</a>
-    		<ul class="dropdown-menu">
-      		<li><a href="projects_commercial.html">Commercial</a></li>
-      		<li><a href="projects_municipal.html">Municipal</a></li>
-          <li><a href="projects_residential.html">Residential</a></li>
-    		</ul>
-  		</li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#civil">Civil Engineering</a></li>
+            <li><a href="services.html#surveying">Surveying</a></li>
+            <li><a href="services.html#landplanning">Land Planning</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="projects_commercial.html">Commercial</a></li>
+            <li><a href="projects_municipal.html">Municipal</a></li>
+            <li><a href="projects_residential.html">Residential</a></li>
+          </ul>
+        </li>
+
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -148,6 +179,7 @@ body.projects-commercial-page::before {
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -157,35 +189,46 @@ body.projects-commercial-page::before {
 
   <!-- MAIN CONTENT -->
   <div class="content">
-    <h1>Commercial Projects</h1>
 
-          <div class="project-card">
-        <div class="project-slider">
-          <button class="project-slider-btn prev" id="exit9-prev" aria-label="Previous image">&#10094;</button>
+    <h1>Commercial Engineering Projects in Dover, New Hampshire</h1>
+    <p>
+      Tritech Engineering has completed commercial engineering projects throughout Dover, NH and the Seacoast region.
+      Our experience includes medical offices, mixed-use developments, and complex commercial sites requiring advanced
+      stormwater management, grading, and utility coordination.
+    </p>
 
-          <img
-            id="exit9-slider-image"
-            src="images/exit9OGcolor.jpg"
-            alt="Exit 9 Medical Office Site"
-          />
+    <div class="project-card">
+      <div class="project-slider">
+        <button class="project-slider-btn prev" id="exit9-prev" aria-label="Previous image">&#10094;</button>
 
-          <button class="project-slider-btn next" id="exit9-next" aria-label="Next image">&#10095;</button>
-        </div>
+        <img
+          id="exit9-slider-image"
+          src="images/exit9OGcolor.jpg"
+          alt="Exit 9 medical office commercial development in Dover NH"
+        />
 
-        <h3>Exit 9 Medical Office Site</h3>
-        <p class="project-meta">15-Acre Commercial Medical Development &bull; 100,000+ Sq. Ft. Facility</p>
-        <p>
-          The Exit 9 Medical Office Site includes a 100,000+ sq. ft. medical office building with
-          under-building parking, multiple parking lots, and site utilities. This site required careful
-          grading, utility coordination, and advanced stormwater management strategies.
-        </p>
-        <p><strong>Key Design Elements:</strong></p>
-        <ul>
-          <li>10,000 ft³ under-pavement stormwater detention/infiltration system</li>
-          <li>Innovative stormwater treatment design</li>
-          <li>Integrated under-building parking structure</li>
-        </ul>
+        <button class="project-slider-btn next" id="exit9-next" aria-label="Next image">&#10095;</button>
       </div>
+
+      <h3>Exit 9 Medical Office Site</h3>
+      <p class="project-meta">
+        15-Acre Commercial Medical Development &bull; 100,000+ Sq. Ft. Facility &bull; Dover, NH
+      </p>
+      <p>
+        The Exit 9 Medical Office Site includes a 100,000+ square foot medical office building with under-building parking,
+        multiple parking areas, and extensive site utilities. The project required detailed grading, utility coordination,
+        and advanced stormwater management design.
+      </p>
+      <p><strong>Key Design Elements:</strong></p>
+      <ul>
+        <li>10,000 cubic foot under-pavement stormwater detention and infiltration system</li>
+        <li>Innovative stormwater treatment strategies</li>
+        <li>Integrated under-building parking structure</li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- END CONTENT -->
 
   <!-- FOOTER -->
   <div class="site-footer">
@@ -197,7 +240,6 @@ body.projects-commercial-page::before {
 
 <script type="text/javascript">
 (function () {
-  // List of Exit 9 images for the slideshow
   var exit9Images = [
     "images/exit9OGcolor.jpg",
     "images/exit9plan1.jpg",
@@ -213,7 +255,6 @@ body.projects-commercial-page::before {
   if (!imgEl || !prevBtn || !nextBtn) return;
 
   function showImage(index) {
-    // wrap around using modulo
     currentIndex = (index + exit9Images.length) % exit9Images.length;
     imgEl.src = exit9Images[currentIndex];
   }
@@ -229,7 +270,6 @@ body.projects-commercial-page::before {
 </script>
 
 <script>
-  // Hamburger toggle
   const btn = document.querySelector(".nav-toggle");
   const nav = document.querySelector("#primary-nav");
 
@@ -239,34 +279,7 @@ body.projects-commercial-page::before {
       btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
   }
-
-  // Mobile dropdown: tap to open/close
-  function isMobileNav() {
-    return window.matchMedia("(max-width: 600px)").matches;
-  }
-
-  document.querySelectorAll(".site-nav .dropdown > a").forEach((topLink) => {
-    topLink.addEventListener("click", (e) => {
-      if (!isMobileNav()) return;
-
-      const li = topLink.parentElement;
-      const submenu = li.querySelector(".dropdown-menu");
-
-      // If this item has a submenu, toggle it (don’t navigate)
-      if (submenu) {
-        e.preventDefault();
-
-        // Close other dropdowns (optional but cleaner)
-        document.querySelectorAll(".site-nav .dropdown.submenu-open").forEach((openLi) => {
-          if (openLi !== li) openLi.classList.remove("submenu-open");
-        });
-
-        li.classList.toggle("submenu-open");
-      }
-    });
-  });
 </script>
-
 
 </body>
 </html>
