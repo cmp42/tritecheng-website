@@ -4,8 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Tritech Engineering</title>
-<link rel="canonical" href="https://tritechengcorp.netlify.app/services.html" />
+
+  <!-- SEO: Title + Description -->
+  <title>Engineering Services in Dover, NH | Civil Engineering & Land Surveying | Tritech</title>
+  <meta name="description" content="Engineering services in Dover, NH including civil engineering, land surveying, and site planning. Tritech supports residential, commercial, and municipal projects across Dover and the Seacoast region." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tritechengcorp.netlify.app/services.html" />
+
   <link href="tritech.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
@@ -90,6 +96,12 @@
       color: #ffffff;
     }
 
+    /* Small helper for intro emphasis (minimal visual impact) */
+    .service-area {
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
     /* Responsive */
     @media (max-width: 980px) {
       .service-grid {
@@ -97,6 +109,36 @@
       }
     }
   </style>
+
+  <!-- (Optional but helpful) Organization/LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tritech Engineering Corporation",
+    "url": "https://tritechengcorp.netlify.app/services.html",
+    "telephone": "+1-603-742-8107",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "755 Central Avenue",
+      "addressLocality": "Dover",
+      "addressRegion": "NH",
+      "postalCode": "03820",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Dover, NH",
+      "Seacoast New Hampshire",
+      "Portsmouth, NH",
+      "Rochester, NH"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Civil Engineering" },
+      { "@type": "Offer", "name": "Land Surveying" },
+      { "@type": "Offer", "name": "Site Planning & Land Planning" }
+    ]
+  }
+  </script>
 </head>
 
 <body class="services-page">
@@ -116,16 +158,16 @@
     <!-- Navigation Bar -->
     <nav class="site-nav" aria-label="Main navigation">
 
-        <!-- Hamburger button (mobile only) -->
-  <button class="nav-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-nav">
-    ☰
-  </button>
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="primary-nav">
+        ☰
+      </button>
 
-  <!-- Main navigation links -->
-  <ul id="primary-nav" class="nav-links">
+      <!-- Main navigation links -->
+      <ul id="primary-nav" class="nav-links">
 
         <li class="dropdown">
           <a href="index.html">About</a>
@@ -137,7 +179,6 @@
         <li class="dropdown">
           <a href="services.html">Services</a>
           <ul class="dropdown-menu">
-            <!-- Updated to NEW pages -->
             <li><a href="civileng.html">Civil Engineering</a></li>
             <li><a href="surveying.html">Surveying</a></li>
             <li><a href="landplan.html">Land Planning</a></li>
@@ -161,6 +202,7 @@
       <a class="linkedin-icon"
          href="https://www.linkedin.com/company/tritech-engineering-corp"
          target="_blank"
+         rel="noopener"
          aria-label="Tritech LinkedIn">
         <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
@@ -169,17 +211,20 @@
   </div>
   <!-- END HEADER -->
 
-
   <!-- MAIN CONTENT -->
   <div class="content">
 
     <div class="services-intro">
-      <h1>Services</h1>
+      <h1>Engineering Services in Dover, New Hampshire</h1>
       <p>
-        Tritech Engineering Corporation provides a full range of civil engineering, surveying, and land planning services.
-        Our goal is to deliver practical, cost-effective solutions that address both technical requirements and real-world
-        project constraints.
+        Tritech Engineering Corporation provides civil engineering, land surveying, and site planning services in Dover, NH.
+        We deliver practical, cost-effective solutions that address technical requirements and real-world project constraints.
       </p>
+
+      <p class="service-area">
+        Serving Dover and the Seacoast region, including Portsmouth and Rochester, New Hampshire.
+      </p>
+
       <p>
         Explore our service areas below to learn more about what we offer and how we can support your next project.
       </p>
@@ -242,7 +287,6 @@
   </div>
   <!-- END content -->
 
-
   <!-- FOOTER -->
   <div class="site-footer">
     <p>Tritech Engineering — 755 Central Avenue — Dover, New Hampshire — 03820</p>
@@ -290,7 +334,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
